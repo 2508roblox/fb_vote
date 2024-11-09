@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="55gP035Ci1yETPzJe0O7xVhQC3PjC2zv3JIvC0iB">
+        <title>Miss & Mr UD Student Ambassador Contest-2024</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta property="og:image" content="images/miss-vlu-2023-banner.png">
+        <!-- Scripts -->
+        <link rel="preload" as="style" href="https://hoakhoi2023.vlu.edu.vn/build/assets/app-782d0991.css">
+        <link rel="preload" as="style" href="https://hoakhoi2023.vlu.edu.vn/build/assets/app-1ffd0f8b.css">
+        <link rel="stylesheet" href="css/app-782d0991.css">
+        <link rel="stylesheet" href="css/app-1ffd0f8b.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <style>
+            .img-stack li {
+                width: 30px;
+                height: 30px;
+                display: grid;
+                border-radius: 50%;
+                box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.3);
+            }
+            .img-stack li img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <img class="img-doan-hoi" src="images/logo-doan-hoi-vanlang.png" alt="Van Lang Union Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active miss-text" aria-current="page" href="/">Miss & Mr UD Student Ambassador Contest-2024</a>
+                            </li>
+                        </ul>
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gioithieu.html">Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="huongdan.html">Voting Instructions</a>
+                            </li>
+                            <!-- Authentication Links -->
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-primary text-white" type="button" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main>
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/bg.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-4">
+                        <h1 style="font-size: 1.5rem; font-weight: 700;">CONTESTANT LIST</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mt-4" id="contestant-1">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/1.jpg" alt="Đoàn Nguyễn Phương Anh">
+                                <div class="card-body">
+                                    <h4>Đoàn Nguyễn Phương Anh</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 105
+                                        <br>
+                                        <b>Faculty:</b> Public Relations - Communications
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/16.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/5.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/21.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/5.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/6.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">30+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 181</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-2">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/2.jpg" alt="Thái Hồng Anh">
+                                <div class="card-body">
+                                    <h4>Thái Hồng Anh</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 126
+                                        <br>
+                                        <b>Faculty:</b> Law
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/13.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/18.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/22.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/9.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/23.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">48+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 149</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-3">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/3.jpg" alt="Hồ Trương Ngọc Ánh">
+                                <div class="card-body">
+                                    <h4>Hồ Trương Ngọc Ánh</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 146
+                                        <br>
+                                        <b>Faculty:</b> Public Relations - Communications
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/1.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/24.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/23.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/21.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/23.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">28+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 125</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-4">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/4.jpg" alt="Nguyễn Nhật Hoàng Cẩm">
+                                <div class="card-body">
+                                    <h4>Nguyễn Nhật Hoàng Cẩm</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 106
+                                        <br>
+                                        <b>Faculty:</b> Commerce
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/7.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/4.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/17.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/13.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/1.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">48+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 49</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-5">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/5.jpg" alt="Nguyễn Minh Hồng Cẩm">
+                                <div class="card-body">
+                                    <h4>Nguyễn Minh Hồng Cẩm</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 157
+                                        <br>
+                                        <b>Faculty:</b> Arts, Theater, and Cinema
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/17.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/6.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/8.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/14.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/24.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">28+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 25</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-6">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/6.jpg" alt="Nguyễn Võ Kim Chi">
+                                <div class="card-body">
+                                    <h4>Nguyễn Võ Kim Chi</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 155
+                                        <br>
+                                        <b>Faculty:</b> Foreign Languages
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/20.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/16.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/21.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/13.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/2.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/22.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">28+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 49</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-7">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/7.jpg" alt="Nguyễn Thị Thúy Dung">
+                                <div class="card-body">
+                                    <h4>Nguyễn Thị Thúy Dung</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 109
+                                        <br>
+                                        <b>Faculty:</b> Finance - Banking
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/24.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/14.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/24.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/11.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/10.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/7.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">48+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 151</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-8">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/8.jpg" alt="Phùng Lê Thanh Hà">
+                                <div class="card-body">
+                                    <h4>Phùng Lê Thanh Hà</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 112
+                                        <br>
+                                        <b>Faculty:</b> Foreign Languages
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/6.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/19.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/5.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/11.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/20.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/19.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">40+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 119</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-9">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/9.jpg" alt="Võ Thị Hằng">
+                                <div class="card-body">
+                                    <h4>Võ Thị Hằng</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 124
+                                        <br>
+                                        <b>Faculty:</b> Public Relations - Communications
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/5.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/1.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/20.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/13.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/21.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/7.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">33+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 106</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-11">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/11.jpg" alt="Lường Thị Vĩnh Linh">
+                                <div class="card-body">
+                                    <h4>Lường Thị Vĩnh Linh</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 113
+                                        <br>
+                                        <b>Faculty:</b> Commerce
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/24.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/4.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/22.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/15.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/9.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/17.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">14+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 78</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-12">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/12.jpg" alt="Trần Hoàng Phương Linh">
+                                <div class="card-body">
+                                    <h4>Trần Hoàng Phương Linh</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 120
+                                        <br>
+                                        <b>Faculty:</b> Public Relations - Communications
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/23.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/21.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/13.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/12.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/16.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">28+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 43</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-13">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/13.jpg" alt="Nguyễn Thanh Khánh Linh">
+                                <div class="card-body">
+                                    <h4>Nguyễn Thanh Khánh Linh</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 171
+                                        <br>
+                                        <b>Faculty:</b> Public Relations - Communications
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/19.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/16.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/22.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/18.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/24.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/5.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">19+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 72</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-14">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/14.jpg" alt="Lê Thị Kim Ngân">
+                                <div class="card-body">
+                                    <h4>Lê Thị Kim Ngân</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 127
+                                        <br>
+                                        <b>Faculty:</b> Public Relations - Communications
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/22.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/15.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/14.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/22.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">17+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 36</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-15">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/15.jpg" alt="Huỳnh Bảo Ngọc">
+                                <div class="card-body">
+                                    <h4>Huỳnh Bảo Ngọc</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 110
+                                        <br>
+                                        <b>Faculty:</b> Finance - Banking
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/16.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/5.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/23.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/14.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/21.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/9.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">35+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 28</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-16">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/16.jpg" alt="Nguyễn Thị Hồng Nhung">
+                                <div class="card-body">
+                                    <h4>Nguyễn Thị Hồng Nhung</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 160
+                                        <br>
+                                        <b>Faculty:</b> Applied Arts
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/1.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/22.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/19.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/7.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/15.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/16.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">34+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 24</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-17">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/17.jpg" alt="Đặng Trần Thanh Tâm">
+                                <div class="card-body">
+                                    <h4>Đặng Trần Thanh Tâm</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 156
+                                        <br>
+                                        <b>Faculty:</b> Public Relations - Communications
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/10.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/11.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/19.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/10.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/23.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/5.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">15+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 131</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-18">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/18.jpg" alt="Nguyễn Hoàng Thu Thảo">
+                                <div class="card-body">
+                                    <h4>Nguyễn Hoàng Thu Thảo</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 154
+                                        <br>
+                                        <b>Faculty:</b> Tourism
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/15.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/23.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/3.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/17.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/21.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/19.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">21+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 38</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-4" id="contestant-19">
+                            <div class="card">
+                                <img class="card-img-top" src="images/person/19.jpg" alt="Mai Trương Bảo Trân">
+                                <div class="card-body">
+                                    <h4>Mai Trương Bảo Trân</h4>
+                                    <p class="card-text">
+                                        <b>ID:</b> 104
+                                        <br>
+                                        <b>Faculty:</b> Fine Arts and Design
+                                    </p>
+                                    <ul class="img-stack d-flex">
+                                            <li><img src="https://miss.votingforstudents.com/images/user/16.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/19.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/5.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/20.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/9.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li><img src="https://miss.votingforstudents.com/images/user/2.jpg" alt="member-img" style="border-radius: 100%;">
+                                            </li>
+                                            <li class="bg-theme">43+</li>
+                                        </ul>
+                                </div>
+                                <div class="text-center">
+                                    <p><b>Votes: 33</b></p>
+                                    <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Vote</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a>
+                    </li>
+                    <li class="nav-item"><a href="gioithieu.html" class="nav-link px-2 text-muted">Introduction</a>
+                    </li>
+                    <li class="nav-item"><a href="huongdan.html" class="nav-link px-2 text-muted">Voting Instructions</a>
+                    </li>
+                    <li class="nav-item"><a target="_blank" href="https://www.facebook.com/dtndhvl" class="nav-link px-2 text-muted">Fanpage</a>
+                    </li>
+                </ul>
+                <p class="text-center text-muted">© 2024 - Copyright by Miss & Mr UD Student Ambassador Contest-2024</p>
+            </footer>
+        </div>
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Please log in with your Facebook account to vote for the contestant!</p>
+                        <a href="/login">
+                            <img src="images/2021_Facebook_icon.svg.webp" style="width: 85px;" alt="logo">
+                        </a>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <a type="button" class="btn btn-success" href="/login">Continue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="js/app-4b6ab911.js?1565858621"></script>
+    </body>
+</html>
