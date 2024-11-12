@@ -28,6 +28,7 @@ use App\Livewire\AccountOrdersDetail;
 use App\Livewire\BlogCategory;
 use App\Livewire\Login;
 use App\Livewire\Logout;
+use App\Livewire\OtpPage;
 use App\Livewire\Register;
 use App\Livewire\ScheduleForm;
 use App\Livewire\VotingGuide;
@@ -92,3 +93,4 @@ Route::middleware(RedirectIfAuthenticated::class)->group(function () {
 Route::get('/schedule', ScheduleForm::class)->name('schedule');
 Route::get('/login', Login::class)->name('login');
 Route::get('/voting-guide', VotingGuide::class)->name('voting-guide');
+Route::get('/otp', OtpPage::class)->name('otp-page');

